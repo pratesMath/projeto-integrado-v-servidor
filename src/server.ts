@@ -50,8 +50,8 @@ server.register(customerReservationsRoutes, {
 async function main() {
   await server
     .listen({
-      port: env.SERVER_PORT ?? 8967,
-      host: env.SERVER_HOST ?? "0.0.0.0",
+      port: env.SERVER_PORT || 8967,
+      host: "0.0.0.0",
     })
     .then(() => {
       console.log(`🚀 O servidor está rodando`);
