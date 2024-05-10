@@ -1,0 +1,28 @@
+### Cadastrar clientes
+POST http://192.168.0.19:9549/customers/cadastro
+Content-Type: application/json
+
+{
+  "email": "matheus.prates@mail.com",
+  "name": "Matheus Prates",
+  "password": "1234567890"
+}
+
+### login clientes
+POST http://192.168.0.19:9549/customers/login
+Content-Type: application/json
+
+{
+  "email": "matheus.prates@mail.com",
+  "password": "1234567890"
+}
+
+### Obter clientes (deve estar logado)
+GET http://192.168.0.19:9549/customers/todos
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjdXN0b21lcklkIjoiYWM1YWNlZmYtZTYxMC00NzlhLTk3NmItNjc2ZmViNWUwN2FlIiwiZW1haWwiOiJtYXRoZXVzLnByYXRlc0BtYWlsLmNvbSIsIm5hbWUiOiJNYXRoZXVzIFByYXRlcyIsImlhdCI6MTcxNDM1MTcyMX0.oG2IO2evXkO6JiqAAv0ISBUespEbrUO5UZd7xWI5CoM
+
+### logout cliente (deve estar logado)
+DELETE  http://192.168.0.19:9549/customers/logout
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjdXN0b21lcklkIjoiYWM1YWNlZmYtZTYxMC00NzlhLTk3NmItNjc2ZmViNWUwN2FlIiwiZW1haWwiOiJtYXRoZXVzLnByYXRlc0BtYWlsLmNvbSIsIm5hbWUiOiJNYXRoZXVzIFByYXRlcyIsImlhdCI6MTcxNDM1MTcyMX0.oG2IO2evXkO6JiqAAv0ISBUespEbrUO5UZd7xWI5CoM

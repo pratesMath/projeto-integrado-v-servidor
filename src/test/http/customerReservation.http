@@ -1,0 +1,28 @@
+### ac5aceff-e610-479a-976b-676feb5e07ae (customerId)
+
+### Cadastrar reserva do cliente (tem que dar erro)
+POST http://192.168.0.19:9549/customer_reservations/cadastro
+Content-Type: application/json
+
+{
+"bookingId": "c7c46760-0cb4-4d4d-97bc-5691043c7db9", // Hotel Node.JS
+"customerId": "ac5aceff-e610-479a-976b-676feb5e07ae",
+"startDate": "01/06/2024",
+"endDate": "07/06/2024",
+"customerSelectedRooms": [
+  "Suíte ES6",
+  "Quarto ES2020"
+]
+}
+
+### obter todas reserva do cliente pelo id
+GET http://192.168.0.19:9549/customer_reservations/todas/ac5aceff-e610-479a-976b-676feb5e07ae
+Content-Type: application/json
+
+### obter uma reserva reserva do cliente pelo id
+GET http://192.168.0.19:9549/customer_reservations/976477b0-506b-4318-8afe-8ff51ba12535
+Content-Type: application/json
+
+### cancelar reserva do cliente pelo id
+DELETE  http://192.168.0.19:9549/customer_reservations/cancelar/d5fa8cad-2ad7-43c2-882c-734514746cf0
+Content-Type: application/json

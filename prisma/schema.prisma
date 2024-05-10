@@ -1,0 +1,59 @@
+generator client {
+  provider        = "prisma-client-js"
+  previewFeatures = ["driverAdapters"] // configuração do adaptador do banco Neon com Prisma
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL") //para neon database
+}
+
+// Tabela de clientes
+model Customer {
+  customerId          String                @id @default(uuid())
+  email               String                @unique @db.VarChar(256)
+  name                String?               @db.VarChar(180)
+  password            String                @db.VarChar(256)
+  CustomerReservation CustomerReservation[]
+
+  @@map("customers")
+}
+
+// Tabela de administradores
+model Admin {
+  adminId  String    @id @default(uuid())
+  email    String    @unique @db.VarChar(256)
+  name     String    @db.VarChar(180)
+  password String    @db.VarChar(256)
+  booking  Booking[]
+
+  @@map("admins")
+}
+
+// Tabela de hotéis (para reserva)
+model Booking {
+  bookingId           String                @id @default(uuid())
+  adminId             String
+  bookingName         String                @unique @db.VarChar(256)
+  address             String                @unique @db.VarChar(256)
+  imageUrlArr         String[]
+  availableRoomsArr   String[]
+  admin               Admin                 @relation(fields: [adminId], references: [adminId])
+  CustomerReservation CustomerReservation[]
+
+  @@map("bookings")
+}
+
+// Tabela de reserva de hotéis
+model CustomerReservation {
+  customerReservationId String   @id @default(uuid())
+  bookingId             String
+  customerId            String
+  selectedRoomsArr      String[]
+  startDate             DateTime
+  endDate               DateTime
+  customer              Customer @relation(fields: [customerId], references: [customerId])
+  booking               Booking  @relation(fields: [bookingId], references: [bookingId])
+
+  @@map("customer_reservations")
+}

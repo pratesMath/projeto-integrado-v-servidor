@@ -1,0 +1,120 @@
+### 89f73994-dce9-4a4f-a191-ed46008d6c5e (adminId)
+
+### obter hotel pelo id
+GET http://192.168.0.19:9549/bookings/526b8a6b-54b9-40d4-b3ab-a5559cf55d1c
+Content-Type: application/json
+
+### Cadastrar hotel 1
+POST http://192.168.0.19:9549/bookings/cadastro
+Content-Type: application/json
+
+{
+  "adminId": "89f73994-dce9-4a4f-a191-ed46008d6c5e",
+  "bookingName": "Hotel Java Lang",
+  "address": "R. James Gosling, 1995",
+  "imageUrlArr": [
+    "https://github.com/patrilucas59/PI-V/assets/128199775/ae8e6baf-bd13-486a-8253-48bfb78bfa44",
+    "https://github.com/patrilucas59/PI-V/assets/128199775/5576fcea-9208-44cc-9abf-d84d489d9979",
+    "https://github.com/patrilucas59/PI-V/assets/128199775/16e2c843-c836-4825-94e1-de87f5ee31d8",
+    "https://github.com/patrilucas59/PI-V/assets/128199775/f0c2fe29-0c9a-4ce5-a49a-2b05527daad5",
+    "https://github.com/patrilucas59/PI-V/assets/128199775/4d4a510c-d85a-4c7e-a4f8-72f5a9f4e2c0"
+  ],
+  "availableRoomsArr": [
+    "Suíte 8",
+    "Quarto 11",
+    "Quarto 17"
+  ]
+}
+
+### Cadastrar hotel 2
+POST http://192.168.0.19:9549/bookings/cadastro
+Content-Type: application/json
+
+{
+  "adminId": "89f73994-dce9-4a4f-a191-ed46008d6c5e",
+  "bookingName": "Hotel Node.JS",
+  "address": "AV. Ryan Dahl, 2009",
+  "imageUrlArr": [
+    "https://github.com/patrilucas59/PI-V/assets/128199775/4a97f4dd-16c9-4949-8fd7-10746ab122c4",
+    "https://github.com/patrilucas59/PI-V/assets/128199775/2c85743b-fe46-4d82-9e0c-a819f46ce1c4",
+    "https://github.com/patrilucas59/PI-V/assets/128199775/fead40a2-b4d3-44a9-a0d9-e4534f9af225",
+    "https://github.com/patrilucas59/PI-V/assets/128199775/30e8414c-6018-4a7f-a282-ed41cd4cc97a",
+    "https://github.com/patrilucas59/PI-V/assets/128199775/55243e78-daaa-4a4f-a524-43b56bd7cb23"
+  ],
+  "availableRoomsArr": [
+    "Suíte ES6",
+    "Quarto ES2015",
+    "Quarto ES2020"
+  ]
+}
+
+### Cadastrar hotel 3
+POST http://192.168.0.19:9549/bookings/cadastro
+Content-Type: application/json
+
+{
+  "adminId": "89f73994-dce9-4a4f-a191-ed46008d6c5e",
+  "bookingName": "Hotel Rust Lang",
+  "address": "R. Graydon Hoare - Mozilla, 2010",
+  "imageUrlArr": [
+    "https://github.com/patrilucas59/PI-V/assets/128199775/29f51cca-e99b-4f1f-9a2b-deb120e5f98c",
+    "https://github.com/patrilucas59/PI-V/assets/128199775/61cddd60-8492-413e-b9a3-cdf37902a693",
+    "https://github.com/patrilucas59/PI-V/assets/128199775/4a50437c-f44b-4157-8a81-d635f16540f2",
+    "https://github.com/patrilucas59/PI-V/assets/128199775/4a448b85-1400-456c-b9e1-ca6311d0a8d2",
+    "https://github.com/patrilucas59/PI-V/assets/128199775/ebe96585-8f26-46a5-bdcb-bf864ad038a2"
+  ],
+  "availableRoomsArr": [
+    "Suíte 1.75",
+    "suíte 1.72",
+    "Quarto 1.20",
+    "Quarto 1.44",
+    "Quarto 1.66"
+  ]
+}
+
+### Cadastrar hotel 4
+POST http://192.168.0.19:9549/bookings/cadastro
+Content-Type: application/json
+
+{
+  "adminId": "89f73994-dce9-4a4f-a191-ed46008d6c5e",
+  "bookingName": "Hotel Python 3",
+  "address": "R. Guido van Rossum, 1991",
+  "imageUrlArr": [
+    "https://github.com/patrilucas59/PI-V/assets/128199775/214c6cb7-3a5f-4a7d-a370-b96fe2eb9312",
+    "https://github.com/patrilucas59/PI-V/assets/128199775/15c70b24-280d-42a4-b5bd-0196d41f3f9b",
+    "https://github.com/patrilucas59/PI-V/assets/128199775/fee1620d-eaa5-42a5-812e-95f6798e80f7",
+    "https://github.com/patrilucas59/PI-V/assets/128199775/a24ee29f-1c79-4172-80d0-c123ee35e88d",
+    "https://github.com/patrilucas59/PI-V/assets/128199775/d71712b2-0aee-400b-9140-257c5bdfbb57"
+  ],
+  "availableRoomsArr": [
+    "Suíte Py3.10",
+    "suíte Py3.8",
+    "Quarto Py3.6",
+    "Quarto Py3.4",
+    "Quarto Py3.0"
+  ]
+}
+
+### Cadastrar hotel 5
+POST http://192.168.0.19:9549/bookings/cadastro
+Content-Type: application/json
+
+{
+  "adminId": "89f73994-dce9-4a4f-a191-ed46008d6c5e",
+  "bookingName": "Hotel Go lang",
+  "address": "AV. Robert Griesemer - Google, 2009",
+  "imageUrlArr": [
+    "https://github.com/patrilucas59/PI-V/assets/128199775/c6a8ab06-37c6-4a43-9290-0f6d75dc10ac",
+    "https://github.com/patrilucas59/PI-V/assets/128199775/8499c069-155a-472c-8495-90a1917bda03",
+    "https://github.com/patrilucas59/PI-V/assets/128199775/85373e13-d2c4-47ae-ac73-339506f22a3b",
+    "https://github.com/patrilucas59/PI-V/assets/128199775/aa0d3eb5-a51a-4d5c-a4f4-11f5d0848261",
+    "https://github.com/patrilucas59/PI-V/assets/128199775/f4d54050-9b98-4072-bac4-c6731155c249"
+  ],
+  "availableRoomsArr": [
+    "Suíte Go1.19.3",
+    "Quarto Go1.19.1",
+    "Quarto Go1.19.0",
+    "Quarto Go1.18.3"
+  ]
+}
